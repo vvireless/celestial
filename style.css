@@ -114,6 +114,17 @@ h3 {
   animation-delay: 0.5s; 
 }
 
+.about-section a, .about-section em {
+  color: #B5A6E5;
+  text-decoration: underline; 
+  text-decoration-style: wavy; 
+  text-decoration-thickness: 2px;
+}
+
+.about-section a:hover {
+  color: #fbc2eb;
+}
+
 /* Sections Styling */
 section {
   margin: 100px 0;
@@ -221,13 +232,6 @@ table {
 
 .get-involved-section a {
   color: #FBA7BB; 
-  text-decoration: underline; 
-  text-decoration-style: wavy; 
-  text-decoration-thickness: 2px;
-}
-
-.about-section em {
-  color: #FBA7BB;
   text-decoration: underline; 
   text-decoration-style: wavy; 
   text-decoration-thickness: 2px;
