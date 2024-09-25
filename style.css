@@ -21,22 +21,8 @@ body {
   background-image: linear-gradient(to bottom, white 93%, #B5A6E5 100%);
   background-size: cover; /* Ensure gradient covers the entire background smoothly */
   background-repeat: no-repeat; /* Prevents the gradient from repeating */
-}
-
-/* Sidebar for Hack Club Logo */
-.sidebar {
-  position: fixed;
-  left: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 1000;
-}
-
-.hackclub-logo {
-  width: 250px;
-  position: fixed;
-  left: 60px;
-  top: -420px;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 /* Navbar Styling */
@@ -48,6 +34,15 @@ nav {
   left: 0;
   z-index: 10;
   padding: 60px 0;
+}
+
+.hackclub-logo img{
+  max-width: 19%;
+  margin-left: 10%;
+  margin-top:-90px;
+  float: left;
+  position: relative;
+  z-index: 999;
 }
 
 .nav-links {
@@ -111,6 +106,7 @@ h1 {
 }
 
 h3 {
+  margin-top: 20px; /* Add space between h1 and h3 */
   font-size: 24px; /* Adjust size as needed */
   font-family: "Ubuntu", sans-serif; /* Ensure consistent font */
   opacity: 0; /* Start fully transparent */
@@ -123,10 +119,16 @@ section {
   margin: 100px 0;
 }
 
+.about-section h2{
+  margin-bottom: 15px;
+}
+
 .about-section p,
 .schedule-section p {
   width: 80%;
-  margin: 0 auto 20px;
+  margin-left: auto; /* Slightly shift to the left */
+  margin-right: auto; /* Keep right margin auto for centering effect */
+  margin-bottom: 20px;
   line-height: 1.6;
   text-shadow: 2px 2px #f4f1fb;
 }
@@ -180,25 +182,36 @@ table {
   width: 100%;
 }
 
-.events-section .events-gallery {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
+.events-section {
+  text-align: center; /* Center the section heading */
+  padding: 20px; /* Add some padding */
+}
+
+.events-gallery {
+  display: flex; /* Use flexbox to layout items in a row */
+  justify-content: center; /* Center the items */
+  flex-wrap: wrap; /* Allow items to wrap onto the next line if necessary */
+  padding: 60px; /* Add padding around the gallery */
 }
 
 .event-item {
-  width: 200px; /* Fixed width for event items */
-  height: 150px; /* Fixed height for event items */
-  overflow: hidden; /* Prevent overflow */
-  margin-bottom: 20px;
+  flex: 1 1 calc(33.333% - 20px); /* Each item takes up 1/3 of the row minus space */
+  margin: 10px; /* Space around each item */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: add a shadow for depth */
+  border-radius: 8px; /* Optional: round the corners */
+  overflow: hidden; /* Ensure images don't overflow */
+  position: relative; /* Add relative positioning for absolute children */
 }
 
 .event-item img {
-  width: 100%;
-  height: 100%; /* Fixed height for all images */
-  object-fit: cover; /* Ensure the image covers the area without distortion */
-  border-radius: 10px; /* Maintain border radius */
+  width: 100%; /* Make images responsive */
+  height: 100%; /* Ensure height fills the container */
+  object-fit: cover; /* Ensures the image covers the area without distorting */
+  display: block; /* Prevent bottom spacing issues */
+}
+
+.event-item h4 {
+  margin: 10px 0; /* Space above and below the heading */
 }
 
 .get-involved-section p {
@@ -230,6 +243,7 @@ table {
   pointer-events: none; /* Ignore mouse events */
   transition: opacity 0.1s ease; /* Add opacity transition */
   opacity: 0.8; /* Set initial opacity */
+  z-index: 988;
 }
 
 /* Footer Styling */
@@ -253,6 +267,7 @@ footer .socials a:hover {
   text-decoration: underline;
 }
 
+/*for heart*/
 .heart {
   font-size: 15px;
   position: relative;
@@ -268,7 +283,7 @@ footer .socials a:hover {
 
 .thump {
   position: absolute;
-  top: 1.53px;
+  top: 0;
   right: 0;
   bottom: 0;
   left: 0;
@@ -283,13 +298,13 @@ footer .socials a:hover {
     transform: scale(0.9);
   }
   21% {
-    transform: scale(1.1) skew(0.004turn);
+    transform: scale(1.1) skew(0.004turn)
   }
   28% {
     transform: scale(1) skew(0.008turn);
   }
   35% {
-    transform: scale(1) skew(0);
+    transform: scale(1) skew(0)
   }
 }
 
@@ -312,7 +327,6 @@ footer .socials a:hover {
   }
 }
 
-/* Media Queries for Responsive Design */
 @media (max-width: 768px) {
   body {
     padding-top: 40px; /* Reduce padding for mobile */
