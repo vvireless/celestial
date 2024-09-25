@@ -342,18 +342,24 @@ footer .socials a:hover {
     display: flex; /* Show navbar on mobile */
     flex-direction: column; /* Stack links vertically */
     align-items: center; /* Center links */
+    background: linear-gradient(to bottom, #B5A6E5 4%, rgba(182, 166, 230, 0) 100%);
   }
 
   .nav-links {
     display: none;
   }
 
-  .nav-links a {
-    font-size: 1rem; /* Use rem for responsive sizing */
+  body {
+    overflow-x: hidden;
   }
 
   .get-involved-section p {
     margin-top: 20px;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2rem; 
     padding: 20px;
   }
 
@@ -363,7 +369,6 @@ footer .socials a:hover {
 
   .hackclub-logo img {
     max-width: 30%;
-    margin-left: 3%;
     margin-top: -60px;
     float: left;
     position: relative;
@@ -373,15 +378,18 @@ footer .socials a:hover {
   .celestial-logo {
     width: 100%; 
     max-width: 600px; 
-    margin-bottom: 0.5rem;
+    margin-top: 7.5rem;
   }
 
   h1 {
     font-size: 1.75rem; /* Use rem for responsive sizing */
+    margin-top: 2rem;
+    margin-bottom: -2.5rem;
   }
 
   h3 {
     font-size: 1.25rem; /* Use rem for responsive sizing */
+    padding: 30px;
   }
 
   .schedule-section table {
