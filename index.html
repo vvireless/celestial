@@ -16,7 +16,7 @@
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#get-involved">Get Involved</a></li>
-      <li><a href="#get-involved">Event Schedule</a></li>
+      <li><a href="#events-section">Event Schedule</a></li>
       <li><a href="https://hackclub.com/">Hack Club</a></li>
     </ul>
     <div class="hackclub-logo">
@@ -116,23 +116,43 @@
   <!-- Get Involved Section -->
   <section class="get-involved-section">
     <h2 id="get-involved">How Can I Get Involved?</h2>
-    <p>Sign up for Celestial <a href="https://airtable.com/app0mGghjGQerElZG/shryYMH5B8ISvbGPg">here</a> or join the organizing team by sending us a <a href="mailto:celestial.hackathon@gmail.com">message</a>.</p>
+    <p id="sign-up">Sign up for Celestial <a href="https://airtable.com/app0mGghjGQerElZG/shryYMH5B8ISvbGPg">here</a> or join the organizing team by sending us a <a href="mailto:celestial.hackathon@gmail.com">message</a>.</p>
+    <h2>Have another question?</h2>
+    <p>Reach out to us! Our email is <a href="mailto:celestial.hackathon@gmail.com"> celestial.hackathon@gmail.com</a>!</p>  
   </section>
 
   <div class="cursor-alien">👾</div>
 
   <script type="text/javascript">
-    var cursor = document.querySelector('.cursor-alien');
+    const cursor = document.querySelector('.cursor-alien');
+    let lastX, lastY; // Variables to store the last cursor position
+
+    // Update the cursor position based on mouse movement
     document.addEventListener('mousemove', function(e) {
-      var x = e.pageX; // Get the mouse X position relative to the entire document
-      var y = e.pageY; // Get the mouse Y position relative to the entire document
-      cursor.style.left = x + 'px'; // Set the left position
-      cursor.style.top = y + 'px'; // Set the top position
+        lastX = e.clientX; // Store the last X position
+        lastY = e.clientY; // Store the last Y position
+        cursor.style.left = `${lastX}px`; // Update left position
+        cursor.style.top = `${lastY}px`; // Update top position
     });
-    document.body.addEventListener("scroll", e => {
-      root.style.setProperty('--mouse-x', e.clientX + "px");
-      root.style.setProperty('--mouse-y', window.scrollY + e.clientY + "px");
+
+    // Hide the cursor when scrolling
+    window.addEventListener('scroll', function() {
+        cursor.style.opacity = '0'; // Hide cursor during scroll
     });
+
+    // Show the cursor again after scrolling stops and reset position
+    let scrollTimeout;
+    window.addEventListener('scroll', function() {
+        clearTimeout(scrollTimeout);
+        cursor.style.opacity = '0'; // Hide cursor during scroll
+        scrollTimeout = setTimeout(function() {
+            cursor.style.opacity = '1'; // Show cursor after scrolling stops
+            // Reset position to last known cursor coordinates
+            cursor.style.left = `${lastX}px`; // Reset left position
+            cursor.style.top = `${lastY}px`; // Reset top position
+        }, 100); // Adjust delay as needed
+    });
+
   </script>
 
 </body>

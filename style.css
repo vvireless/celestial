@@ -5,11 +5,11 @@
   box-sizing: border-box;
 }
 
-/* Apply background gradient to html, and make sure it covers the entire viewport */
+/* Background Gradient */
 html {
   height: 100%;
   background: linear-gradient(180deg, #d8b8e5, #fbc2eb);
-  background-size: cover; /* Ensure gradient covers the entire background smoothly */
+  background-size: cover; 
 }
 
 body {
@@ -17,10 +17,10 @@ body {
   color: #b6a6e6;
   text-align: center;
   padding-top: 60px;
-  min-height: 100%; /* Ensure body height doesn't mess with the gradient */
+  min-height: 100%; 
   background-image: linear-gradient(to bottom, white 93%, #B5A6E5 100%);
-  background-size: cover; /* Ensure gradient covers the entire background smoothly */
-  background-repeat: no-repeat; /* Prevents the gradient from repeating */
+  background-size: cover; 
+  background-repeat: no-repeat; 
   width: 100%;
   overflow-x: hidden;
 }
@@ -36,10 +36,10 @@ nav {
   padding: 60px 0;
 }
 
-.hackclub-logo img{
+.hackclub-logo img {
   max-width: 19%;
   margin-left: 10%;
-  margin-top:-90px;
+  margin-top: -90px;
   float: left;
   position: relative;
   z-index: 999;
@@ -49,6 +49,7 @@ nav {
   display: flex;
   justify-content: center;
   list-style: none;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
 .nav-links li {
@@ -59,7 +60,7 @@ nav {
   color: white;
   text-decoration: none;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 1.25rem; /* Use rem for responsive sizing */
   transition: color 0.3s ease;
 }
 
@@ -69,49 +70,48 @@ nav {
 
 /* Header Styling */
 header {
-  padding: 60px 0; /* Adjusted padding to shift the header up */
+  padding: 60px 0; 
   position: relative;
 }
 
 @keyframes fadeIn {
   from {
-    opacity: 0; /* Start fully transparent */
+    opacity: 0; 
   }
   to {
-    opacity: 1; /* End fully opaque */
+    opacity: 1; 
   }
 }
 
 .celestial-logo {
-  width: 800px; /* Keep your existing size */
-  margin-bottom: 10px; /* Existing margin */
+  width: 800px; 
+  max-width: 100%; /* Ensure logo is responsive */
+  margin-bottom: 10px; 
   overflow: hidden;
-  position: relative; /* Keep your existing position */
-  top: -50px; /* Existing adjustment */
-  animation: fadeIn 1s ease-in; /* Apply fade-in animation */
+  position: relative; 
+  top: -50px; 
+  animation: fadeIn 1s ease-in; 
 }
 
 .header-text {
-  margin-top: -140px; /* Reduced margin to bring text closer to the logo */
+  margin-top: -140px; 
 }
 
 h1 {
-  font-size: 40px;
-  font-family: "Ubuntu", sans-serif;
+  font-size: 2.5rem; /* Use rem for responsive sizing */
   text-shadow: 2px 2px #f4f1fb;
-  margin: 0; /* Reset margin to avoid unwanted space */
-  opacity: 0; /* Start fully transparent */
-  animation: fadeIn 1.5s ease-in forwards; /* Apply fade-in animation */
-  animation-delay: 0.5s; /* Delay to start after logo */
+  margin: 0; 
+  opacity: 0; 
+  animation: fadeIn 1.5s ease-in forwards; 
+  animation-delay: 0.5s; 
 }
 
 h3 {
-  margin-top: 20px; /* Add space between h1 and h3 */
-  font-size: 24px; /* Adjust size as needed */
-  font-family: "Ubuntu", sans-serif; /* Ensure consistent font */
-  opacity: 0; /* Start fully transparent */
-  animation: fadeIn 1.5s ease-in forwards; /* Apply fade-in animation */
-  animation-delay: 0.5s; /* Delay to start after h1 */
+  margin-top: 20px; 
+  font-size: 1.5rem; /* Use rem for responsive sizing */
+  opacity: 0; 
+  animation: fadeIn 1.5s ease-in forwards; 
+  animation-delay: 0.5s; 
 }
 
 /* Sections Styling */
@@ -119,40 +119,40 @@ section {
   margin: 100px 0;
 }
 
-.about-section h2{
+.about-section h2 {
   margin-bottom: 15px;
 }
 
 .about-section p,
 .schedule-section p {
   width: 80%;
-  margin-left: auto; /* Slightly shift to the left */
-  margin-right: auto; /* Keep right margin auto for centering effect */
+  margin-left: auto; 
+  margin-right: auto; 
   margin-bottom: 20px;
   line-height: 1.6;
   text-shadow: 2px 2px #f4f1fb;
 }
 
 .schedule-section {
-  margin: 100px 0; /* Add margin to the top and bottom of the section */
-  padding: 20px; /* Add padding inside the section for breathing room */
+  margin: 100px 0; 
+  padding: 20px; 
 }
 
 .schedule-section h2 {
-  margin-bottom: 20px; /* Space below the heading */
-  font-size: 28px; /* Optional: Increase the heading size for emphasis */
+  margin-bottom: 20px; 
+  font-size: 1.75rem; /* Use rem for responsive sizing */
 }
 
 .schedule-section table {
   width: 90%;
   margin: 0 auto;
   border-collapse: collapse;
-  margin-top: 40px; /* Add space above the table */
+  margin-top: 40px; 
 }
 
 .schedule-section th,
 .schedule-section td {
-  padding: 12px; /* Increase padding in table cells for better spacing */
+  padding: 12px; 
 }
 
 table,
@@ -180,38 +180,39 @@ tr:hover {
 table {
   border-collapse: collapse;
   width: 100%;
+  overflow-x: auto; /* Allow horizontal scrolling */
 }
 
 .events-section {
-  text-align: center; /* Center the section heading */
-  padding: 20px; /* Add some padding */
+  text-align: center; 
+  padding: 20px; 
 }
 
 .events-gallery {
-  display: flex; /* Use flexbox to layout items in a row */
-  justify-content: center; /* Center the items */
-  flex-wrap: wrap; /* Allow items to wrap onto the next line if necessary */
-  padding: 60px; /* Add padding around the gallery */
+  display: flex; 
+  justify-content: center; 
+  flex-wrap: wrap; 
+  padding: 60px; 
 }
 
 .event-item {
-  flex: 1 1 calc(33.333% - 20px); /* Each item takes up 1/3 of the row minus space */
-  margin: 10px; /* Space around each item */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: add a shadow for depth */
-  border-radius: 8px; /* Optional: round the corners */
-  overflow: hidden; /* Ensure images don't overflow */
-  position: relative; /* Add relative positioning for absolute children */
+  flex: 1 1 calc(33.333% - 20px); 
+  margin: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  border-radius: 8px; 
+  overflow: hidden; 
+  position: relative; 
 }
 
 .event-item img {
-  width: 100%; /* Make images responsive */
-  height: 100%; /* Ensure height fills the container */
-  object-fit: cover; /* Ensures the image covers the area without distorting */
-  display: block; /* Prevent bottom spacing issues */
+  width: 100%; 
+  height: auto; /* Adjust height for responsive behavior */
+  object-fit: cover; 
+  display: block; 
 }
 
 .event-item h4 {
-  margin: 10px 0; /* Space above and below the heading */
+  margin: 10px 0; 
 }
 
 .get-involved-section p {
@@ -219,7 +220,7 @@ table {
 }
 
 .get-involved-section a {
-  color: #FBA7BB; /* Link color */
+  color: #FBA7BB; 
   text-decoration: underline; 
   text-decoration-style: wavy; 
   text-decoration-thickness: 2px;
@@ -233,16 +234,20 @@ table {
 }
 
 .get-involved-section {
-  margin-bottom: 170px; /* Adjust this value as needed */
+  margin-bottom: 170px; 
+}
+
+#sign-up {
+  margin-bottom: 10rem; 
 }
 
 .cursor-alien {
-  position: absolute; /* Keep it fixed relative to the viewport */
-  font-size: 30px; /* Size of the alien emoji */
-  transform: translate(-50%, -50%); /* Center the emoji */
-  pointer-events: none; /* Ignore mouse events */
-  transition: opacity 0.1s ease; /* Add opacity transition */
-  opacity: 0.8; /* Set initial opacity */
+  position: fixed; 
+  font-size: 30px; 
+  transform: translate(-50%, -50%); 
+  pointer-events: none; 
+  transition: opacity 0.1s ease; 
+  opacity: 0.8; 
   z-index: 988;
 }
 
@@ -267,7 +272,7 @@ footer .socials a:hover {
   text-decoration: underline;
 }
 
-/*for heart*/
+/* For heart */
 .heart {
   font-size: 15px;
   position: relative;
@@ -298,13 +303,13 @@ footer .socials a:hover {
     transform: scale(0.9);
   }
   21% {
-    transform: scale(1.1) skew(0.004turn)
+    transform: scale(1.1) skew(0.004turn);
   }
   28% {
     transform: scale(1) skew(0.008turn);
   }
   35% {
-    transform: scale(1) skew(0)
+    transform: scale(1) skew(0);
   }
 }
 
@@ -327,42 +332,64 @@ footer .socials a:hover {
   }
 }
 
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
   body {
-    padding-top: 40px; /* Reduce padding for mobile */
+    padding-top: 40px; 
   }
 
   nav {
-    display: none; /* Hide the navbar on mobile */
+    display: flex; /* Show navbar on mobile */
+    flex-direction: column; /* Stack links vertically */
+    align-items: center; /* Center links */
   }
 
   .nav-links {
-    flex-direction: column; /* Stack links vertically if navbar were to show */
-    padding: 20px 0; /* Add some padding */
+    display: none;
   }
 
   .nav-links a {
-    font-size: 18px; /* Slightly smaller font size for mobile */
+    font-size: 1rem; /* Use rem for responsive sizing */
+  }
+
+  .get-involved-section p {
+    margin-top: 20px;
+    padding: 20px;
+  }
+
+  .cursor-alien {
+    display: none; 
+  }
+
+  .hackclub-logo img {
+    max-width: 30%;
+    margin-left: 3%;
+    margin-top: -60px;
+    float: left;
+    position: relative;
+    z-index: 999;
   }
 
   .celestial-logo {
-    width: 100%; /* Make logo responsive */
-    max-width: 600px; /* Limit max width for larger screens */
+    width: 100%; 
+    max-width: 600px; 
+    margin-bottom: 0.5rem;
   }
 
   h1 {
-    font-size: 28px; /* Reduce font size for mobile */
+    font-size: 1.75rem; /* Use rem for responsive sizing */
   }
 
   h3 {
-    font-size: 20px; /* Reduce font size for mobile */
+    font-size: 1.25rem; /* Use rem for responsive sizing */
   }
 
-  section {
-    margin: 50px 0; /* Reduce margins for sections */
+  .schedule-section table {
+    width: 100%;
+    overflow-x: auto; 
   }
 
-  .get-involved-section {
-    margin-bottom: 100px; /* Adjust for mobile */
+  .event-item {
+    flex: 1 1 calc(100% - 20px); /* Stack events on mobile */
   }
 }
