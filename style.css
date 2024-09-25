@@ -206,7 +206,7 @@ table {
 
 .event-item img {
   width: 100%; 
-  height: auto; /* Adjust height for responsive behavior */
+  height: 100%; /* Adjust height for responsive behavior */
   object-fit: cover; 
   display: block; 
 }
