@@ -336,6 +336,11 @@ footer .socials a:hover {
 @media (max-width: 768px) {
   body {
     padding-top: 40px; 
+    overflow-x: hidden;
+  }
+
+  html {
+    overflow-x: hidden;
   }
 
   nav {
@@ -347,10 +352,6 @@ footer .socials a:hover {
 
   .nav-links {
     display: none;
-  }
-
-  body {
-    overflow-x: hidden;
   }
 
   .get-involved-section p {
@@ -368,9 +369,10 @@ footer .socials a:hover {
   }
 
   .hackclub-logo img {
-    max-width: 30%;
+    max-width: 50%;
     margin-top: -60px;
     float: left;
+    margin-left: 1rem;
     position: relative;
     z-index: 999;
   }
