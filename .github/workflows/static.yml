@@ -24,11 +24,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
 
-      - name: Create .nojekyll file
+      - name: Create .nojekyll to bypass Jekyll processing
         run: echo "" > .nojekyll
       
       - name: Upload artifact to GitHub Pages
