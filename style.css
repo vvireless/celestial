@@ -27,7 +27,7 @@ body {
 
 /* Navbar Styling */
 nav {
-  background: linear-gradient(to bottom, #B5A6E5 2%, rgba(182, 166, 230, 0) 100%);
+  background: linear-gradient(to bottom, #B5A6E5 0.5%, rgba(182, 166, 230, 0) 100%);
   position: fixed;
   width: 100%;
   top: 0;
