@@ -115,12 +115,12 @@ h3 {
   margin-bottom: 1rem;
 }
 
-/* #about em {
+#about em {
   color: #B5A6E5;
   text-decoration: underline; 
   text-decoration-style: wavy; 
   text-decoration-thickness: 1px;
-} */
+}
 
 .header-text h2, .header-text a {
   color: #B5A6E5;
@@ -267,7 +267,7 @@ table {
 }
 .faq-section {
   padding: 40px;
-  margin-top: -2rem;
+  margin-top: -100px;
   margin-bottom: 225px;
 }
 
